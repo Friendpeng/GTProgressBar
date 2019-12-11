@@ -294,7 +294,8 @@ public class GTProgressBar: UIView {
     }
     
     private func updateProgressLabelText() {
-        progressLabel.text = "\(Int(round(_progress * 100)))%"
+        /// 支持进度调显示小数
+        progressLabel.text = "\(String(format: "%.2f", _progress * 100))%"
     }
     
     public func animateTo(progress: CGFloat, completion: (() -> Void)? = nil) {

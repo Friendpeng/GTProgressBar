@@ -61,7 +61,8 @@ extension FrameCalculator {
     }
     
     func labelFrameSize() -> CGSize {
-        return UILabel.sizeFor(content: "100%", font: self.font)
+        /// 支持进度调显示小数
+        return UILabel.sizeFor(content: "100.00%", font: self.font)
     }
 }
 
